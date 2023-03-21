@@ -1,0 +1,1 @@
+aws ec2 describe-instances  | jq '.Reservations[].Instances[] | select(.PublicIpAddress == "35.180.32.195") | .ImageId, .InstanceId'
